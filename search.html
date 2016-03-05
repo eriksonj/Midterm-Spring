@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Midterm</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body id="home">
+        <h1>Glimmer3 Parameter Selection</h1>
+        <form name="form name here" method='post' action="./midterm.cgi">
+            <p>
+                >gi|4589740|dbj|AB011549.2| Escherichia coli O157:H7 str. Sakai plasmid pO157 DNA, complete sequence
+            </p>
+            <p>
+                Glimmer3 parameters to return:
+            
+                <select name="dropdown">
+                    <option value="eColi_o10_g50_t15">Min Gene Overlap: 10 / Min Gene Length: 50 / Min Threshold: 15</option>
+                    <option value="eColi_o25_g75_t20">Min Gene Overlap: 25 / Min Gene Length: 75 / Min Threshold: 20</option>
+                    <option value="eColi_o30_g100_t30">Min Gene Overlap: 30 / Min Gene Length: 100 / Min Threshold: 30</option>
+                    <option value="eColi_o50_g110_t30">Min Gene Overlap: 50 / Min Gene Length: 110 / Min Threshold: 30</option>
+                </select>
+            </p>
+
+            
+            <input type="submit" value="Submit">
+            
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>GenBank vs. Glimmer3 (v.3.02) Comparison</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    </head>
+    <!-- test -->
+    <body>
+        
+        <p>
+        GenBank Reference Genes/CDS: {{genBankCount}}
+        </p>
+        
+        <p>
+            Glimmer3 Predicted orfs: {{predictedCount}}
+        </p>
+        <p>
+            Exact Coordinate Matches: {{exactCount}}
+        </p> 
+        <p>
+            5' Only Matches: {{prime5Count}}
+        </p>   
+        <p>
+            3' Only Matches: {{prime3Count}}
+        </p> 
+        <p>
+            Reference Genes/CDS with neither 5' or 3' Match: {{genBankNoOverlapCount}}
+        </p>
+        <p>
+            Glimmer3 Predicted orfs with Neither 5' or 3' Match: {{predictedNoOverlapCount}}
+        </p>
+        
+        
+        
+        
+        <h1>Escherichia coli O157:H7 str. Sakai plasmid pO157 DNA</h1>
+        <table style="width:100%">
+
+            
+            <tr>
+                <th align="left">GenBank AB011549.2 Protein ID</th>
+                <th align="left">Glimmer3 Predicted orf</th>
+                <th align="left">5' Start</th>
+                <th align="left">Glimmer3 5' Start</th>
+                <th align="left">5' Match?</th>
+                <th align="left">3' End</th>
+                <th align="left">Glimmer3 3' End</th>
+                <th align="left">3' Match?</th>
+                <th align="left">GenBank-Glimmer3 Agreement</th>
+            </tr>
+            
+            
+            
+            {% for value in values %}
+            <tr>
+                <!--  -->
+                <td>{{value[0]}}</td>
+                <!--  -->
+                <td>{{value[1]}}</td>
+                <!--  -->
+                <td>{{value[2]}}</td>
+                <!--  -->
+                <td>{{value[3]}}</td>
+                <!--  -->
+                <td>{{value[4]}}</td>
+                <!--  -->
+                <td>{{value[5]}}</td>
+                <!--  -->
+                <td>{{value[6]}}</td>
+                <!--  -->
+                <td>{{value[7]}}</td>
+                <!--  -->
+                <td>{{value[8]}}</td>
+            </tr>
+            {% endfor %}
+            
+        </table>
+    </body>
+</html>
